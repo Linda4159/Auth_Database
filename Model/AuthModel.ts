@@ -5,6 +5,7 @@ interface userA {
   email: string;
   password: string;
   isActive: boolean;
+  profileImage:string
 }
 interface iuserA extends userA, mongoose.Document {}
 
@@ -24,6 +25,9 @@ const userSchema = new mongoose.Schema(
     isActive: {
       type: Boolean,
     },
+    profileImage:{
+      type:String
+    }
   },
   {
     timestamps: true,
